@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from '../components/Navbar';
 import SideBar from '../components/SideBar';
@@ -6,15 +7,14 @@ import { Outlet } from 'react-router-dom';
 const Layout = () => {
   return (
     <div className="flex flex-col h-screen">
-      {/* Top Navbar */}
+    
       <Navbar />
 
-      <div className="flex flex-1">
-        {/* Sidebar */}
+      <div className="flex flex-1 overflow-hidden">
+      
         <SideBar />
 
-        {/* Main Content */}
-        <main className="flex-1 p-4 bg-gray-100 overflow-auto">
+        <main className="flex-2 p-4 ml-8 bg-gray-100 overflow-y-auto">
           <Outlet />
         </main>
       </div>

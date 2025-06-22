@@ -1,32 +1,32 @@
-// Sidebar.jsx
 import React from "react";
-import { Home, FileText, Folder, BarChart2, HelpCircle } from "lucide-react";
+import {
+  Home,
+  FileText,
+  Folder,
+  BarChart2,
+  HelpCircle
+} from "lucide-react";
 
 const links = [
-  { icon: <Home />, label: "Home" },
-  { icon: <FileText />, label: "Forms" },
-  { icon: <Folder />, label: "Projects" },
-  { icon: <BarChart2 />, label: "Reports" },
-  { icon: <HelpCircle />, label: "Help" },
+  { icon: Home, label: "Home" },
+  { icon: FileText, label: "Forms" },
+  { icon: Folder, label: "Projects" },
+  { icon: BarChart2, label: "Reports" },
+  { icon: HelpCircle, label: "Help" },
 ];
 
-export default function SideBar() {
+export default function Sidebar() {
   return (
-    <div
-      className={`bg-[#043554] text-white w-64 min-w-[16rem] h-full p-4 space-y-6 fixed lg:static z-40 transform lg:translate-x-0 transition-transform duration-200 ease-in-out ${
-        open ? "translate-x-0" : "-translate-x-full"
-      }`}
-    >
-      <div className="text-xl font-semibold border-b pb-4">City Municipal Corporation</div>
-      <nav className="flex flex-col gap-4">
-        {links.map(({ icon, label }) => (
+    <div className="w-16 bg-[#043554] text-white min-h-screen fixed lg:static z-50 p-3 flex flex-col items-center">
+      <nav className="mt-10 flex flex-col gap-6">
+        {links.map(({ icon: Icon, label }) => (
           <a
             href="#"
             key={label}
-            className="flex items-center gap-4 px-3 py-2 hover:bg-white hover:text-[#043554] rounded"
+            className="p-2 rounded hover:bg-white hover:text-[#043554] transition-colors duration-200"
+            title={label} // Tooltip on hover
           >
-            {icon}
-            <span>{label}</span>
+            <Icon size={24} className="text-white" />
           </a>
         ))}
       </nav>

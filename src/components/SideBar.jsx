@@ -27,8 +27,8 @@ export default function Sidebar() {
             onClick={() => setActiveLink(label)}
             className={`p-2 rounded transition-colors duration-200 ${
               activeLink === label
-                ? "bg-red-500 text-white"
-                : "hover:bg-white hover:text-[#043554] text-white"
+                ? "bg-red-500 text-white cursor-pointer"
+                : "hover:bg-white hover:text-[#043554] text-white cursor-pointer"
             }`}
             title={label} 
           >

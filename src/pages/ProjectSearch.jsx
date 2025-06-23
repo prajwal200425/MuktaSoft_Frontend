@@ -1,14 +1,16 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const ProjectSearch = () => {
+
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-gray-100 p-8">
       <div className="max-w-6xl mx-auto">
-
-       
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 space-y-4 md:space-y-0">
           <h2 className="text-3xl font-bold text-gray-800">Search Projects</h2>
-          <button className="border border-orange-500 text-orange-500 px-5 py-2.5 rounded-md hover:bg-orange-100 text-base font-medium transition">
+          <button onClick={()=>navigate("/project-form")} className="border border-orange-500 text-orange-500 px-5 py-2.5 rounded-md hover:bg-orange-100 text-base font-medium transition">
             + Create New Project
           </button>
         </div>

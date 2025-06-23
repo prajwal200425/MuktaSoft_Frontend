@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function LoginPage() {
+export default function Login() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-cover bg-center bg-blue-900 bg-opacity-80 relative">
       <div className="absolute inset-0 bg-[url('/your-building-image.jpg')] bg-cover bg-center opacity-30"></div>

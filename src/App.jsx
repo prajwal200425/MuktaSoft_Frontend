@@ -4,6 +4,7 @@ import SideBar from "./components/SideBar";
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Layout from "./pages/Layout";
 import Login from "./pages/login"
+import ProjectSearch from "./pages/pagesSearch";
 export default function App() {
  
   return (
@@ -14,6 +15,9 @@ export default function App() {
 
         </Route>
         <Route path="/login" element={<Login/>}>
+
+        </Route>
+        <Route path="/pagesearch" element={<ProjectSearch/>}>
 
         </Route>
 

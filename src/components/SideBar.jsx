@@ -20,7 +20,7 @@ export default function Sidebar() {
 
   return (
     <div className="w-16 bg-[#043554] text-white min-h-screen fixed lg:static z-50 p-3 flex flex-col items-center">
-      <nav className="mt-10 flex flex-col gap-6">
+      <nav className="mt-10 flex flex-col gap-6 cursor-pointer">
         {links.map(({ icon: Icon, label }) => (
           <button
             key={label}

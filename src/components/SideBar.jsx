@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Home,
   FileText,
   Folder,
   BarChart2,
-  HelpCircle
+  HelpCircle,
 } from "lucide-react";
 
 const links = [
@@ -16,18 +16,24 @@ const links = [
 ];
 
 export default function Sidebar() {
+  const [activeLink, setActiveLink] = useState("Home");
+
   return (
     <div className="w-16 bg-[#043554] text-white min-h-screen fixed lg:static z-50 p-3 flex flex-col items-center">
-      <nav className="mt-10 flex flex-col gap-6">
+      <nav className="mt-10 flex flex-col gap-6 cursor-pointer">
         {links.map(({ icon: Icon, label }) => (
-          <a
-            href="#"
+          <button
             key={label}
-            className="p-2 rounded hover:bg-white hover:text-[#043554] transition-colors duration-200"
-            title={label} // Tooltip on hover
+            onClick={() => setActiveLink(label)}
+            className={`p-2 rounded transition-colors duration-200 ${
+              activeLink === label
+                ? "bg-red-500 text-white"
+                : "hover:bg-white hover:text-[#043554] text-white"
+            }`}
+            title={label} 
           >
-            <Icon size={24} className="text-white" />
-          </a>
+            <Icon size={24} />
+          </button>
         ))}
       </nav>
     </div>

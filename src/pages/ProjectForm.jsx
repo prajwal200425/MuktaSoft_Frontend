@@ -6,10 +6,11 @@ const ProjectForm = () => {
 
   return (
     <div className="bg-gray-100 min-h-screen overflow-auto p-4">
-      <div className="max-w-4xl mx-auto bg-white p-6 shadow-md rounded">
+      <div className="max-w-6xl mx-auto bg-white p-6 shadow-md rounded">
         <h2 className="text-2xl font-semibold mb-6 border-b pb-2">Create Project</h2>
 
         <form className="space-y-6 text-sm">
+          {/* Top Section */}
           <div className="space-y-4">
             <div>
               <label className="block mb-1 font-medium">Date of Proposal:</label>
@@ -42,6 +43,7 @@ const ProjectForm = () => {
             </div>
           </div>
 
+          {/* Tabs */}
           <div className="border-b border-gray-300">
             <div className="flex space-x-8 text-sm font-medium cursor-pointer">
               <span
@@ -67,6 +69,7 @@ const ProjectForm = () => {
             </div>
           </div>
 
+          {/* Tab Contents */}
           {activeTab === 'project' && (
             <div className="space-y-4">
               <select className="w-full border border-gray-300 p-2 rounded">
@@ -107,14 +110,89 @@ const ProjectForm = () => {
             </div>
           )}
 
-          {activeTab === 'financial' && (
-            <div className="text-gray-500 italic">Financial details form goes here...</div>
-          )}
+{activeTab === 'financial' && (
+  <div className="space-y-4">
+    <div>
+      <label className="block mb-1 font-medium">Fund*</label>
+      <input type="text" className="w-full border border-gray-300 p-2 rounded" />
+    </div>
+    <div>
+      <label className="block mb-1 font-medium">Function*</label>
+      <input type="text" className="w-full border border-gray-300 p-2 rounded" />
+    </div>
+    <div>
+      <label className="block mb-1 font-medium">Budget Head*</label>
+      <input type="text" className="w-full border border-gray-300 p-2 rounded" />
+    </div>
+    <div>
+      <label className="block mb-1 font-medium">Scheme*</label>
+      <input type="text" className="w-full border border-gray-300 p-2 rounded" />
+    </div>
+    <div>
+      <label className="block mb-1 font-medium">Sub Scheme*</label>
+      <input type="text" className="w-full border border-gray-300 p-2 rounded" />
+    </div>
+  </div>
+)}
+
 
           {hasSubProjects && activeTab === 'subproject' && (
-            <div className="text-gray-500 italic">Sub-project details form goes here...</div>
+            <div className="space-y-4">
+              <div className="overflow-x-auto">
+                <table className="min-w-full table-auto border border-gray-300 text-sm">
+                  <thead className="bg-gray-100">
+                    <tr>
+                      <th className="border px-3 py-2 text-left">S.No</th>
+                      <th className="border px-3 py-2 text-left">Name of the Work</th>
+                      <th className="border px-3 py-2 text-left">Estimated Amount (in ₹)</th>
+                      <th className="border px-3 py-2 text-left">Type of Work</th>
+                      <th className="border px-3 py-2 text-left">Sub-Type of Work</th>
+                      <th className="border px-3 py-2 text-left">Nature of Work</th>
+                      <th className="border px-3 py-2 text-left">Project</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="border px-3 py-2">1</td>
+                      <td className="border px-3 py-2">
+                        <input type="text" className="w-full p-1 border border-gray-300 rounded" />
+                      </td>
+                      <td className="border px-3 py-2">
+                        <input type="text" className="w-full p-1 border border-gray-300 rounded" />
+                      </td>
+                      <td className="border px-3 py-2">
+                        <select className="w-full p-1 border border-gray-300 rounded">
+                          <option>Select</option>
+                        </select>
+                      </td>
+                      <td className="border px-3 py-2">
+                        <select className="w-full p-1 border border-gray-300 rounded">
+                          <option>Select</option>
+                        </select>
+                      </td>
+                      <td className="border px-3 py-2">
+                        <select className="w-full p-1 border border-gray-300 rounded">
+                          <option>Select</option>
+                        </select>
+                      </td>
+                      <td className="border px-3 py-2">
+                        <select className="w-full p-1 border border-gray-300 rounded">
+                          <option>Select</option>
+                        </select>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div>
+                <button className="text-orange-500 hover:underline text-sm flex items-center mt-2">
+                  ➕ Add Line Item
+                </button>
+              </div>
+            </div>
           )}
 
+          {/* Upload + Button */}
           <div>
             <label className="block mb-1 font-medium">Upload Files</label>
             <input type="file" className="w-full border border-gray-300 p-2 rounded" />

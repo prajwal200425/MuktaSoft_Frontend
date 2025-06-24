@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+import {useNavigate} from 'react-router-dom'
 
 const ProjectForm = () => {
   const [activeTab, setActiveTab] = useState('project');
   const [hasSubProjects, setHasSubProjects] = useState(false);
+  const today = new Date().toISOString().split('T')[0];
+  const navigate = useNavigate()
+
 
   return (
     <div className="bg-gray-100 min-h-screen overflow-auto p-4">
@@ -10,11 +14,11 @@ const ProjectForm = () => {
         <h2 className="text-2xl font-semibold mb-6 border-b pb-2">Create Project</h2>
 
         <form className="space-y-6 text-sm">
-          {/* Top Section */}
+
           <div className="space-y-4">
             <div>
               <label className="block mb-1 font-medium">Date of Proposal:</label>
-              <input type="date" className="w-full border border-gray-300 p-2 rounded bg-gray-100" defaultValue="2022-06-05" readOnly />
+              <input type="date" className="w-full border border-gray-300 p-2 rounded bg-gray-100" defaultValue={today} readOnly />
             </div>
             <div>
               <label className="block mb-1 font-medium">Project Name*</label>
@@ -69,7 +73,6 @@ const ProjectForm = () => {
             </div>
           </div>
 
-          {/* Tab Contents */}
           {activeTab === 'project' && (
             <div className="space-y-4">
               <select className="w-full border border-gray-300 p-2 rounded">
@@ -110,30 +113,30 @@ const ProjectForm = () => {
             </div>
           )}
 
-{activeTab === 'financial' && (
-  <div className="space-y-4">
-    <div>
-      <label className="block mb-1 font-medium">Fund*</label>
-      <input type="text" className="w-full border border-gray-300 p-2 rounded" />
-    </div>
-    <div>
-      <label className="block mb-1 font-medium">Function*</label>
-      <input type="text" className="w-full border border-gray-300 p-2 rounded" />
-    </div>
-    <div>
-      <label className="block mb-1 font-medium">Budget Head*</label>
-      <input type="text" className="w-full border border-gray-300 p-2 rounded" />
-    </div>
-    <div>
-      <label className="block mb-1 font-medium">Scheme*</label>
-      <input type="text" className="w-full border border-gray-300 p-2 rounded" />
-    </div>
-    <div>
-      <label className="block mb-1 font-medium">Sub Scheme*</label>
-      <input type="text" className="w-full border border-gray-300 p-2 rounded" />
-    </div>
-  </div>
-)}
+          {activeTab === 'financial' && (
+            <div className="space-y-4">
+              <div>
+                <label className="block mb-1 font-medium">Fund*</label>
+                <input type="text" className="w-full border border-gray-300 p-2 rounded" />
+              </div>
+              <div>
+                <label className="block mb-1 font-medium">Function*</label>
+                <input type="text" className="w-full border border-gray-300 p-2 rounded" />
+              </div>
+              <div>
+                <label className="block mb-1 font-medium">Budget Head*</label>
+                <input type="text" className="w-full border border-gray-300 p-2 rounded" />
+              </div>
+              <div>
+                <label className="block mb-1 font-medium">Scheme*</label>
+                <input type="text" className="w-full border border-gray-300 p-2 rounded" />
+              </div>
+              <div>
+                <label className="block mb-1 font-medium">Sub Scheme*</label>
+                <input type="text" className="w-full border border-gray-300 p-2 rounded" />
+              </div>
+            </div>
+          )}
 
 
           {hasSubProjects && activeTab === 'subproject' && (
@@ -192,14 +195,13 @@ const ProjectForm = () => {
             </div>
           )}
 
-          {/* Upload + Button */}
           <div>
             <label className="block mb-1 font-medium">Upload Files</label>
             <input type="file" className="w-full border border-gray-300 p-2 rounded" />
           </div>
 
           <div className="flex justify-end">
-            <button className="bg-orange-500 text-white px-6 py-2 rounded hover:bg-orange-600">Create Estimate</button>
+            <button onClick={()=>navigate("/project-sucess")} className="bg-orange-500 text-white px-6 py-2 rounded hover:bg-orange-600">Create new Project</button>
           </div>
         </form>
       </div>

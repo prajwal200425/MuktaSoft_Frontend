@@ -51,7 +51,7 @@ export default function Navbar() {
         </Link>
 
         <span className="font-semibold text-[#043554] text-sm whitespace-nowrap hidden sm:block">
-          mSeva
+          MUKTAsoft
         </span>
 
         <button

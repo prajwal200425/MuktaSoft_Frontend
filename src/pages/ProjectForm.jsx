@@ -7,6 +7,9 @@ const ProjectForm = () => {
   const today = new Date().toISOString().split('T')[0];
   const navigate = useNavigate()
 
+  const handleCreate = ()=>{
+    navigate("/project-sucess")
+  }
 
   return (
     <div className="bg-gray-100 min-h-screen overflow-auto p-4">
@@ -201,7 +204,7 @@ const ProjectForm = () => {
           </div>
 
           <div className="flex justify-end">
-            <button onClick={()=>navigate("/project-sucess")} className="bg-orange-500 text-white px-6 py-2 rounded hover:bg-orange-600">Create new Project</button>
+            <button onClick={handleCreate} className="bg-orange-500 text-white px-6 py-2 rounded hover:bg-orange-600">Create new Project</button>
           </div>
         </form>
       </div>

@@ -5,6 +5,7 @@ import Login from "./pages/Login"
 import Home from './pages/Home';
 import ProjectSearch from './pages/ProjectSearch'
 import ProjectForm from './pages/ProjectForm';
+import ProjectSuccess from './pages/ProjectSuccess';
 
 const App = () => {
   return (
@@ -15,9 +16,9 @@ const App = () => {
             <Route index element={<Home />} />
             <Route path="/project-search" element={<ProjectSearch />} />
             <Route path="/project-form" element={<ProjectForm />} />
+            <Route path="/project-sucess" element={<ProjectSuccess />} />
           </Route>
           <Route path="/login" element={<Login />} />
-          {/* <Route path="/project-sucess" element={<Pro />} /> */}
         </Routes>
       </BrowserRouter>
     </>

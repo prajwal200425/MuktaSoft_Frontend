@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import ProjectSearch from './pages/ProjectSearch'
 import ProjectForm from './pages/ProjectForm';
 import ProjectSuccess from './pages/ProjectSuccess';
+import CreateEstimate from './pages/CreateEstimate';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
             <Route path="/project-search" element={<ProjectSearch />} />
             <Route path="/project-form" element={<ProjectForm />} />
             <Route path="/project-sucess" element={<ProjectSuccess />} />
+            <Route path="/CreateEstimate" element={<CreateEstimate />} />
           </Route>
           <Route path="/login" element={<Login />} />
         </Routes>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from "./pages/Layout";
-import Login from "./pages/Login"
+import Login from "./pages/login"
 import Home from './pages/Home';
 import ProjectSearch from './pages/ProjectSearch'
 import ProjectForm from './pages/ProjectForm';

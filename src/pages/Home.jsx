@@ -31,7 +31,7 @@ const Home = () => {
           <div className="flex justify-between items-center text-gray-800 bg-white hover:bg-orange-50 hover:text-orange-600 rounded-lg px-3 py-2 transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md">
             <span className="text-sm sm:text-base font-medium">Estimates</span>
             <div className="flex items-center space-x-2">
-              <span className="bg-orange-500 text-white text-xs sm:text-sm rounded-full px-2 py-0.5">19</span>
+              {/* <span className="bg-orange-500 text-white text-xs sm:text-sm rounded-full px-2 py-0.5"></span> */}
               <ArrowRight className="h-4 w-4 text-orange-500" />
             </div>
           </div>
@@ -39,7 +39,7 @@ const Home = () => {
           <div className="flex justify-between items-center text-gray-800 bg-white hover:bg-orange-50 hover:text-orange-600 rounded-lg px-3 py-2 transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md">
             <span className="text-sm sm:text-base font-medium">Work Orders</span>
             <div className="flex items-center space-x-2">
-              <span className="bg-orange-500 text-white text-xs sm:text-sm rounded-full px-2 py-0.5">30</span>
+              {/* <span className="bg-orange-500 text-white text-xs sm:text-sm rounded-full px-2 py-0.5"></span> */}
               <ArrowRight className="h-4 w-4 text-orange-500" />
             </div>
           </div>
@@ -47,7 +47,7 @@ const Home = () => {
           <div className="flex justify-between items-center text-gray-800 bg-white hover:bg-orange-50 hover:text-orange-600 rounded-lg px-3 py-2 transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md">
             <span className="text-sm sm:text-base font-medium">Muster Rolls</span>
             <div className="flex items-center space-x-2">
-              <span className="bg-orange-500 text-white text-xs sm:text-sm rounded-full px-2 py-0.5">193</span>
+              {/* <span className="bg-orange-500 text-white text-xs sm:text-sm rounded-full px-2 py-0.5"></span> */}
               <ArrowRight className="h-4 w-4 text-orange-500" />
             </div>
           </div>
@@ -55,7 +55,7 @@ const Home = () => {
           <div className="flex justify-between items-center text-gray-800 bg-white hover:bg-orange-50 hover:text-orange-600 rounded-lg px-3 py-2 transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md">
             <span className="text-sm sm:text-base font-medium">Billing Management</span>
             <div className="flex items-center space-x-2">
-              <span className="bg-orange-500 text-white text-xs sm:text-sm rounded-full px-2 py-0.5">193</span>
+              {/* <span className="bg-orange-500 text-white text-xs sm:text-sm rounded-full px-2 py-0.5"></span> */}
               <ArrowRight className="h-4 w-4 text-orange-500" />
             </div>
           </div>
